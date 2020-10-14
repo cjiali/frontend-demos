@@ -1,0 +1,19 @@
+{
+  "name": "prettier",
+  "version": "0.0.1",
+  "description": "A demo for Prettier.",
+  "main": "index.js",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0"
+  }
+}
