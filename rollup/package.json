@@ -1,0 +1,30 @@
+{
+  "name": "rollup",
+  "version": "0.0.1",
+  "description": "A demo for rollup.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "rollup": "^2.30.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "babel":{
+      "presets": [
+          [
+              "@babel/preset-env",
+              {
+                  "modules": false
+              }
+          ]
+      ]
+  }
+}
