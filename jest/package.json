@@ -9,5 +9,10 @@
   },
   "devDependencies": {
     "jest": "^26.5.3"
+  },
+  "jest": {
+    "verbose": true,
+    "coverage": true,
+    "testEnvironment": "node"
   }
 }
