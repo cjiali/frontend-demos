@@ -1,0 +1,16 @@
+{
+  "name": "frontend-demos",
+  "version": "0.0.1",
+  "description": "A repo for front end demos.",
+  "main": "index.js",
+  "author": "cjiali <chjiali@outlook.com>",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "node scripts/verify-commit-msg.js ${HUSKY_GIT_PARAMS}"
+    }
+  },
+  "devDependencies": {
+    "husky": "^4.3.0"
+  }
+}
