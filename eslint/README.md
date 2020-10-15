@@ -4,6 +4,8 @@
 
 ```bash
 yarn add eslint --dev
+# lint 自动化
+yarn add husky lint-staged --dev
 ```
 
 
@@ -64,6 +66,17 @@ module.exports = {
         // ...,
         "eslint": "eslint",
         // ...
-    }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.js?(x)": [
+            "eslint"
+        ]
+    },
+    // ...
 }
 ```

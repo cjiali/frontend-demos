@@ -1,13 +1,25 @@
 {
-  "name": "eslint",
-  "version": "0.0.1",
-  "description": "A demo for eslint",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-      "eslint": "eslint"
-  },
-  "devDependencies": {
-    "eslint": "^7.11.0"
-  }
+    "name": "eslint",
+    "version": "0.0.1",
+    "description": "A demo for eslint",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "eslint": "eslint"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.js?(x)": [
+            "eslint"
+        ]
+    },
+    "devDependencies": {
+        "eslint": "^7.11.0",
+        "husky": "^4.3.0",
+        "lint-staged": "^10.4.0"
+    }
 }
