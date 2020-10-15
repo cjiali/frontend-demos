@@ -1,0 +1,41 @@
+{
+  "name": "promise",
+  "version": "0.0.1",
+  "description": "A implement for Promise.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest -u"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.5.3",
+    "prettier": "^2.1.2",
+    "rollup": "^2.30.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "babel":{
+      "presets": [
+          [
+              "@babel/preset-env",
+              {
+                  "modules": false
+              }
+          ]
+      ]
+  },
+  "jest": {
+    "verbose": true,
+    "coverage": true,
+    "testEnvironment": "node"
+  }
+}
