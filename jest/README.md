@@ -4,6 +4,8 @@
 
 ```shell
 yarn add --dev jest
+# test 自动化
+yarn add husky lint-staged --dev
 ```
 
 **创建文件（夹）**
@@ -57,6 +59,12 @@ module.exports = sum;
         "test": "jest -u",
         // ...
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && jest -u"
+        }
+    },
+    "lint-staged": {},
     // ...
 }
 ```

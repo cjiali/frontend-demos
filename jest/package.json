@@ -1,18 +1,26 @@
 {
-  "name": "jest",
-  "version": "0.0.1",
-  "description": "A demo for jest",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts":{
-      "test": "jest -u"
-  },
-  "devDependencies": {
-    "jest": "^26.5.3"
-  },
-  "jest": {
-    "verbose": true,
-    "coverage": true,
-    "testEnvironment": "node"
-  }
+    "name": "jest",
+    "version": "0.0.1",
+    "description": "A demo for jest",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "test": "jest -u"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && jest -u"
+        }
+    },
+    "lint-staged": {},
+    "devDependencies": {
+        "husky": "^4.3.0",
+        "jest": "^26.5.3",
+        "lint-staged": "^10.4.0"
+    },
+    "jest": {
+        "verbose": true,
+        "coverage": true,
+        "testEnvironment": "node"
+    }
 }
