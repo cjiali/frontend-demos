@@ -134,18 +134,7 @@ export function minus(a, b){
     "scripts": {
         "build": "rollup -c"
     },
-    // ...,
-    "babel":{
-        "presets": [
-            [
-                "@babel/preset-env",
-                {
-                    // Babel 会在 Rollup 有机会做处理之前，将我们的模块转成 CommonJS，导致 Rollup 的一些处理失败
-                    "modules": false
-                }
-            ]
-        ]
-    }
+    // ...
 }
 ```
 
