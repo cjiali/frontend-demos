@@ -1,0 +1,7 @@
+{
+  "name": "yarn",
+  "version": "0.0.1",
+  "description": "A demo for yarn.",
+  "main": "index.js",
+  "license": "MIT"
+}
