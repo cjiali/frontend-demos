@@ -1,0 +1,51 @@
+{
+  "name": "js-starter",
+  "version": "0.0.1",
+  "description": "A starter template for javascript project.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint",
+    "build": "rollup -c",
+    "test": "jest -u",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && jest -u",
+      "commit-msg": "node scripts/verify-commit-msg.js ${HUSKY_GIT_PARAMS}"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "**/*.js?(x)": [
+      "eslint"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "conventional-changelog-cli": "^2.1.0",
+    "eslint": "^7.11.0",
+    "husky": "^4.3.0",
+    "jest": "^26.5.3",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "rollup": "^2.30.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ]
+    ]
+  }
+}
