@@ -1,0 +1,13 @@
+{
+  "name": "conventional-changelog",
+  "version": "0.0.1",
+  "description": "A demo for Conventional Changelog (Cli).",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+      "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.1.0"
+  }
+}
