@@ -23,16 +23,16 @@ export default function buble(arr) {
 遍历自身以后的元素，最小的元素跟自己调换位置
 
 ```js
-function selectSort(arr) {
-    var len = arr.length;
-    for(let i = 0 ;i < len - 1; i++) {
-        for(let j = i ; j<len; j++) {
-            if(arr[j] < arr[i]) {
-                [arr[i],arr[j]] = [arr[j],arr[i]];
+export default function(arr){
+    let l=arr.length;
+    for(let i=0; i<l-1; i++){
+        for(let j=i; j<l; j++){
+            if(arr[i]>arr[j]){
+                [arr[i], arr[j]]=[arr[j], arr[i]]
             }
         }
     }
-    return arr
+    return arr;
 }
 ```
 
@@ -40,7 +40,7 @@ function selectSort(arr) {
 
 ### 直接插入排序
 
-即将元素插入到已排序好的数组中
+ 将待排序的元素按照大小顺序, 依次插入到一个已经排好序的数组之中, 直到所有的元素都插入进去.
 
 ```js
 function insertSort(arr) {
