@@ -5,12 +5,12 @@
 两两比较
 
 ```js
-function bubleSort(arr) {
-    var len = arr.length;
-    for (let outer = len ; outer >= 2; outer--) {
-        for(let inner = 0; inner <=outer - 1; inner++) {
-            if(arr[inner] > arr[inner + 1]) {
-                [arr[inner],arr[inner+1]] = [arr[inner+1],arr[inner]]
+export default function buble(arr) {
+    let l = arr.length;
+    for (let i = l - 1; i > 1; i--) {
+        for (let j = 0; j <= i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
             }
         }
     }
