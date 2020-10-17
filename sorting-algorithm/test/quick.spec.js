@@ -1,4 +1,4 @@
-import quickSort from "../src/quick";
+import {quickSort1,quickSort2} from "../src/quick";
 
 function randomArray(length) {
     let arr = Array(length);
@@ -23,8 +23,13 @@ function isDscArray(array) {
 describe("quick sort", () => {
     let arr, sortedArr;
     beforeEach(()=>{
-        arr=randomArray(1000);
-        sortedArr=quickSort([...arr]);
+        arr=randomArray(100000);
+        console.time('quickSort1')
+        sortedArr=quickSort1([...arr]);
+        console.timeEnd('quickSort1')
+        console.time('quickSort2')
+        sortedArr=quickSort2([...arr]);
+        console.timeEnd('quickSort2')
     })
     test("test quick sort", () => {
         expect(isAscArray(sortedArr)).toBe(true);

@@ -18,15 +18,32 @@ function partition(array, left, right) {
  * @param {Number|undefined} left 左索引
  * @param {Number|undefined} right 右索引
  */
-function quickSort(array, left, right) {
+export function quickSort1(array, left, right) {
     left = typeof left == "number" ? left : 0;
     right = typeof right == "number" ? right : array.length - 1;
     if (left < right) {
         let partitionIndex = partition(array, left, right); // 切分的基准值
-        quickSort(array, left, partitionIndex - 1);
-        quickSort(array, partitionIndex + 1, right);
+        quickSort1(array, left, partitionIndex - 1);
+        quickSort1(array, partitionIndex + 1, right);
     }
     return array;
 }
 
-export default quickSort;
+export function quickSort2(arr) {
+    if (arr.length <= 1) {
+        return arr; //递归出口
+    }
+    let left = [],
+        right = [];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < arr[0] /* 以第一个元素为基准 */) {
+            left.push(arr[i]); // 放在左边
+        } else {
+            right.push(arr[i]); // 放在右边
+        }
+    }
+    // return [...quickSort2(left), arr[0], ...quickSort2(right)];
+    return quickSort2(left).concat(arr[0], quickSort2(right));
+}
+
+export default quickSort1;
